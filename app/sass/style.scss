@@ -1,0 +1,32 @@
+html {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	counter-reset: list;
+}
+
+.item {
+	background-color: #009070;
+	font-size: 22px;
+	font-family: sans-serif;
+	font-weight: 700;
+	border: 2px solid #000;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	
+	&:nth-child(even) {
+		background-color: #00CCA0;
+	}
+	
+	&:before {
+		content: counter(list);
+		counter-increment: list;
+	}
+}
